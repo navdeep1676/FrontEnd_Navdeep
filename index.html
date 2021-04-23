@@ -9,6 +9,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/jquery.bxslider.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Login System</title>
@@ -18,29 +19,29 @@
     <div class="wrap p-5">
         <h1 class="text-center"> Front_End Navdeep</h1>
         <p class="text-center"> For Desktop Only, Monthly Exams are running.</p>
-        <p class="text-center">My Projetc 1: <a href="http://navdeep1676.myartsonline.com/">Click Here</a></p>
-        <p class="text-center">My Projetc 2: <a href="http://navdeep1676.atwebpages.com/">Click Here</a></p>
+        <p class="text-center">My Project 1: <a href="http://navdeep1676.myartsonline.com/">Click Here</a></p>
+        <p class="text-center">My Project 2: <a href="http://navdeep1676.atwebpages.com/">Click Here</a></p>
         <div class="container">
             <div class="inner-container  d-flex flex-row flex-wrap justify-content-evenly">
                 <div class="left-container  flex-grow-1 bg-white w-50 p-5 rounded-3">
-                    <h1 class="text-center">Login to Mywebsite</h1>
+                    <h1 class="text-center animate__animated animate__backInDown">Login to Mywebsite</h1>
                     <p class="text-center ms-4">Login to your account and manage your digital world</p>
                     <form action="" class="my-4">
                         <div class="form-group">
-                            <label for="" class="mb-1 text-secondary fw-bold">Email</label>
+                            <label for="" class="mb-1 text-secondary fw-bold hoverable">Email</label>
                             <input type="text" name="" id=""
-                                class="form-control border-2 border-top-0 border-start-0 border-end-0" placeholder=""
-                                aria-describedby="helpId">
+                                class="form-control border-2 border-top-0 border-start-0 border-end-0 input-hover"
+                                placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="" class="mb-1 mt-2 text-secondary fw-bold">Password</label>
+                            <label for="" class="mb-1 mt-2 text-secondary fw-bold hoverable">Password</label>
                             <input type="password"
-                                class="form-control border-2 border-top-0 border-start-0 border-end-0" name="" id=""
-                                placeholder="">
+                                class="form-control border-2 border-top-0 border-start-0 border-end-0 input-hover"
+                                name="" id="" placeholder="">
                         </div>
-                        <button class="btn btn-dark w-100 my-3 p-2 fw-bold" type="submit">Log In</button>
+                        <button class="btn btn-dark w-100 my-3 p-2 fw-bold button-hover" type="submit">Log In</button>
                         <div class="my-3"> <span class="line "><span class="mx-2"> or</span> </span></div>
-                        <div class="border w-50 rounded-3 google-signin mx-auto mt-4 mb-5">
+                        <div class="border w-50 rounded-3 google-signin mx-auto mt-4 mb-5 button-hover">
                             <a href="" class="text-decoration-none  text-white text-center">
                                 <img src="./img/download.png" width="40" height="40" alt="" class="">
                                 <span class="text-center ms-3">Sign in with Google</span>
@@ -83,7 +84,44 @@
         $(".box-slider").bxSlider({
             auto: !0,
             controls: !1
-        })
+        });
+        $(".hoverable").hover(function () {
+
+                $(this).addClass('animate__animated animate__pulse')
+
+            },
+
+            function () {
+
+                $(this).removeClass('animate__animated animate__pulse')
+
+            });
+        $(".input-hover").hover(function () {
+
+                $(this).css({
+                    "border-color": 'skyblue'
+                })
+
+            },
+
+            function () {
+
+                $(this).css({
+                    "border-color": 'gray'
+                })
+            });
+
+        $(".button-hover").hover(function () {
+
+                $(this).addClass('animate__animated animate__jello')
+
+            },
+
+            function () {
+
+                $(this).removeClass('animate__animated animate__jello')
+
+            });
     </script>
 </body>
 
